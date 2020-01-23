@@ -62,6 +62,8 @@
         }
       }
 
+      console.log('Requesting credential...');
+
       const result = await navigator.credentials.get(credentialQuery);
 
       console.log('Result of get() request:', JSON.stringify(result.data, null, 2));
