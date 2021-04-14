@@ -52,16 +52,12 @@
             "query": [{
               "type": "QueryByExample",
               "credentialQuery": {
-                "reason": "Please present a UniversityDegreeCredential for JaneDoe.",
+                "reason": "Please present a Profile Verifiable Credential.",
                 "example": {
                   "@context": [
-                    "https://w3id.org/credentials/v1",
-                    "https://www.w3.org/2018/credentials/examples/v1"
+                    "https://w3id.org/credentials/v1"
                   ],
-                  "type": ["UniversityDegreeCredential"],
-                  "credentialSubject": {
-                    "id": "did:example:ebfeb1f712ebc6f1c276e12ec21"
-                  }
+                  "type": ["VerifiableCredential", "Profile"],
                 }
               }
             }]
