@@ -53,7 +53,7 @@
 
   async function onClickRequest() {
     //   document.getElementById('getResults').innerHTML = ''; // clear results
-      const credentialQuery =   {
+    const credentialQuery =   {
         "web": {
           "VerifiablePresentation": {
             "query": [{
@@ -67,7 +67,9 @@
                   "type": ["VerifiableCredential", "Profile"],
                 }
               }
-            }]
+            }],
+            challenge: "99612b24-63d9-11ea-b99f-4f66f3e4f81a",
+            domain: "chapi-verifier.veramo.dev"
           }
         }
       }
