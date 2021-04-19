@@ -48,6 +48,9 @@
   </div>
 </div>
 <script>
+  var jsonViewer = new JSONViewer();
+  document.querySelector("#getResults").appendChild(jsonViewer.getContainer());
+
   async function onClickRequest() {
     //   document.getElementById('getResults').innerHTML = ''; // clear results
       const credentialQuery =   {
@@ -70,8 +73,6 @@
       }
 
       console.log('Requesting credential...');
-      var jsonViewer = new JSONViewer();
-      document.querySelector("#getResults").appendChild(jsonViewer.getContainer());
       const result = await navigator.credentials.get(credentialQuery);
       document.getElementById('resultsPanel').classList.remove('hide');
       jsonViewer.showJSON(result, null, 1);
